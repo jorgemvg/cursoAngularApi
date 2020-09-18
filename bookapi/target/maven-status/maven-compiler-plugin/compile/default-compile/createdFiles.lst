@@ -1,0 +1,4 @@
+com\jmvidal\spring\config\WebConfig.class
+com\jmvidal\spring\model\Book.class
+com\jmvidal\spring\config\AppConfig.class
+com\jmvidal\spring\config\MyWebAppInitializer.class

@@ -1,0 +1,78 @@
+package com.jmvidal.spring.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jmvidal.spring.dao.AuthorDAO;
+import com.jmvidal.spring.model.Author;
+import com.jmvidal.spring.model.Combo;
+import com.jmvidal.spring.model.Empleado;
+
+@Service
+public class CombosServiceImpl implements CombosService{
+
+	
+	@Transactional
+	public List<Empleado> list() {
+		
+		List<Empleado> empleados = new ArrayList<Empleado>();
+		
+		Empleado empleado = new Empleado();
+		
+		empleado.setNombres("Alejandra");
+		empleado.setApellidos("Sepulveda");
+		empleado.setEdad("34");
+		
+		empleados.add(empleado);
+		
+		return empleados;
+		
+//		return authorDao.list();
+		
+	}
+
+	@Override
+	public List<Combo> getPaises() {
+		List lista = new ArrayList<Combo>(){{ new Combo("1","Colombia"); new Combo("2","Mexico"); new Combo("3","Estados Unidos") }};
+		
+//		Empleado empleado = new Empleado();
+//		
+//		empleado.setNombres("Alejandra");
+//		empleado.setApellidos("Sepulveda");
+//		empleado.setEdad("34");
+//		
+//		lista.add(empleado);
+		
+		return lista;
+	}
+
+	@Override
+	public List<Combo> getDepartamentos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Combo> getCiudades() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Combo> getEstadosCiviles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Combo> getSexos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

@@ -1,0 +1,14 @@
+pruebas en postman
+
+PUT
+http://localhost:8080/bookapi/api/book/2
+Headers
+Content-Type    application/json
+Body
+{
+	"title": "la casa en el aire",
+	"author": "jorge mario"
+}
+
+GET
+http://localhost:8080/bookapi/api/book/2

@@ -1,0 +1,87 @@
+package com.jmvidal.spring.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jmvidal.spring.dao.AuthorDAO;
+import com.jmvidal.spring.model.Author;
+import com.jmvidal.spring.model.Empleado;
+
+@Service
+public class EmpleadoServiceImpl implements EmpleadoService{
+
+	private List<Empleado> empleados = new ArrayList<Empleado>();
+	
+	@Override
+	@Transactional
+	public List<Empleado> list() {
+		
+//		List<Empleado> empleados = new ArrayList<Empleado>();
+		
+		Empleado empleado = new Empleado();
+		
+		empleado.setId( new Long("1"));
+		empleado.setNombres("Alejandra");
+		empleado.setApellidos("Sepulveda");
+		empleado.setEdad("34");
+		empleados.add(empleado);
+		
+		empleado = new Empleado();
+		empleado.setId( new Long("2"));
+		empleado.setNombres("Aura");
+		empleado.setApellidos("Vidal");
+		empleado.setEdad("1");
+		empleados.add(empleado);
+		
+		return empleados;
+		
+//		return authorDao.list();
+		
+	}
+	
+//	@Autowired
+//	private AuthorDAO authorDao;
+//	
+//	@Override
+//	@Transactional
+//	public long save(Author author) {
+//		return authorDao.save(author);
+//	}
+//
+//	@Override
+//	@Transactional
+//	public Author get(long id) {
+//		return authorDao.get(id);
+//	}
+//
+//	@Override
+//	@Transactional
+//	public List<Author> list() {
+//		return authorDao.list();
+//	}
+//
+//	@Override
+//	@Transactional
+//	public void update(long id, Author author) {
+//		authorDao.update(id, author);
+//	}
+//
+	@Override
+	@Transactional
+	public void delete(long id) {
+		empleados.remove(id + 1);
+//		authorDao.delete(id);
+	}
+//	
+//	@Override
+//	@Transactional
+//	public boolean exists(long id) {
+//		return authorDao.exists(id);
+//	}
+
+}

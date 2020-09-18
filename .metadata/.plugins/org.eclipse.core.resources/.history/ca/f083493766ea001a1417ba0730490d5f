@@ -1,0 +1,69 @@
+package com.jmvidal.spring.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jmvidal.spring.dao.AuthorDAO;
+import com.jmvidal.spring.model.Author;
+import com.jmvidal.spring.model.Combo;
+import com.jmvidal.spring.model.Empleado;
+
+@Service
+public class CombosServiceImpl implements CombosService{
+
+	
+	@Transactional
+	public List<Empleado> list() {
+		
+		List<Empleado> empleados = new ArrayList<Empleado>();
+		
+		Empleado empleado = new Empleado();
+		
+		empleado.setNombres("Alejandra");
+		empleado.setApellidos("Sepulveda");
+		empleado.setEdad("34");
+		
+		empleados.add(empleado);
+		
+		return empleados;
+		
+//		return authorDao.list();
+		
+	}
+
+	@Override
+	public List<Combo> getPaises() {
+		List lista = new ArrayList<Combo>(){{ new Combo("1","Colombia"); new Combo("2","Mexico"); new Combo("3","Estados Unidos"); }};
+		return lista;
+	}
+
+	@Override
+	public List<Combo> getDepartamentos() {
+		List lista = new ArrayList<Combo>(){{ new Combo("1","Antioquia"); new Combo("2","Quintana Roo"); new Combo("3","New York"); }};
+		return lista;
+	}
+
+	@Override
+	public List<Combo> getCiudades() {
+		List lista = new ArrayList<Combo>(){{ new Combo("1","Medellin"); new Combo("2","Cancun"); new Combo("3","New York"); }};
+		return lista;
+	}
+
+	@Override
+	public List<Combo> getEstadosCiviles() {
+		List lista = new ArrayList<Combo>(){{ new Combo("1","Casado"); new Combo("2","Soltero"); }};
+		return lista;
+	}
+
+	@Override
+	public List<Combo> getSexos() {
+		List lista = new ArrayList<Combo>(){{ new Combo("1","Masculino"); new Combo("2","Femenino"); }};
+		return lista;
+	}
+	
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Proyectos\CursoAngularApi\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+284533891.index
+656492576.index
+1085364312.index
+831171608.index
+1461008947.index
+1333426646.index
